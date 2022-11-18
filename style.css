@@ -1,14 +1,22 @@
 body{
     padding: 0;
     margin: 0;
+    
+    
 }
+
+header{
+    text-align: center;
+    font-size: 50px;
+}
+
 
 *{
     box-sizing: border-box;
 }
 
 img{
-    width: 200px;
+    width: 100%;
 }
 
 main, header, nav, article, aside, footer{
@@ -52,13 +60,93 @@ article>div{
 background-color: navajowhite;
 margin: 5px;
 }
-h3{
+
+article>div>h3{
     margin: 1px;
-}
+    font-size: calc( 8px + 2vw )
+    }
+
 p{
     margin-top: 4px;
 }
 span{
     float: right;
     margin-right: 10px;
+}
+
+aside{
+    padding-left: 10px;
+}
+
+.termekek{
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+}
+
+.termekek>button{
+    height: 20px;
+    color: red;
+}
+
+.fizetes>button{
+    height: 20px;
+    color: brown;
+}
+a:link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: blue;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  
+  a:active {
+    color: blue;
+  }
+
+a{
+    margin-right: 5%;
+}
+
+  nav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+
+@media screen and (max-width:700px) {
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:400px) {
+    article{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "s" 
+        "a"
+        "f";
+        background-color: rgb(230, 201, 159);
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
